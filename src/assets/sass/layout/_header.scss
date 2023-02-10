@@ -1,0 +1,203 @@
+@use '../helpers/variables' as *;
+
+$gap1: 35px;
+$gap2: 15px;
+
+header {
+    padding-block: 30px;
+
+    .container {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: $gap1;
+
+        .logo img {
+            width: 75px;
+            translate: 0 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: capitalize;
+
+            .website-sections {
+                display: flex;
+                gap: $gap1;
+            }
+
+        }
+
+        .sign-btns {
+            display: flex;
+            gap: $gap2;
+
+            .orange-btn {
+                padding: 9px 13px;
+                border-radius: 7px;
+            }
+        }
+
+        .toggle {
+            display: none;
+            height: 19px;
+            width: 21px;
+            position: relative;
+
+            div {
+                position: absolute;
+                background-color: white;
+                width: 100%;
+                height: 3px;
+                border-radius: 2px;
+
+                transition: {
+                    duration: $duration;
+                    property: width, rotate, opacity, top;
+                }
+
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        top: ($i - 1) * 8px;
+                        right: 0;
+
+                        @if ($i ==2) {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+
+            &.clicked div {
+                &:first-child {
+                    top: 8px;
+                    rotate: 45deg;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    top: 8px;
+                    rotate: -45deg;
+                }
+            }
+        }
+
+        @media (width <=992px) {
+            & {
+                grid-template-columns: auto 1fr auto;
+                gap: 20px;
+
+                nav {
+                    justify-content: flex-end;
+                    position: relative;
+
+                    .website-sections {
+                        position: absolute;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        gap: 30px;
+                        right: -41px;
+                        top: 64px;
+                        border-radius: 7px;
+                        padding: 15px;
+                        width: 200px;
+                        background-color: $blue;
+                        translate: 10px;
+                        opacity: 0;
+
+                        pointer-events: none;
+
+                        transition: {
+                            duration: $duration;
+                            property: translate, opacity;
+                        }
+
+                        a {
+                            transition: translate $duration;
+
+                            &:hover {
+                                translate: -10px;
+                            }
+                        }
+
+                        &.open {
+                            translate: 0;
+                            opacity: 1;
+                            pointer-events: initial;
+                        }
+                    }
+                }
+
+                .toggle {
+                    display: block;
+                }
+            }
+        }
+
+        @media (width <=460px) {
+            & {
+                grid-template-columns: repeat(2, auto);
+                justify-content: space-between;
+            }
+
+            nav {
+                font-size: 16px;
+                translate: 0 10px;
+                opacity: 0;
+                pointer-events: none;
+                gap: $gap2;
+                flex-direction: column;
+                align-items: flex-end;
+                position: absolute;
+                right: 15px;
+                background-color: $blue;
+                top: 45px;
+                border-radius: 7px;
+                padding: 20px;
+                width: 200px;
+
+                transition: {
+                    duration: $duration;
+                    property: opacity, translate;
+                }
+
+                .website-sections {
+                    all: unset;
+                    gap: $gap2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+
+                .sign-btns {
+                    flex-direction: column;
+                    display: flex;
+                    align-items: flex-end;
+
+                    button {
+                        transition: translate $duration;
+
+                        &:hover {
+                            translate: -10px;
+                        }
+                    }
+                }
+
+                &.open {
+                    translate: 0;
+                    opacity: 1;
+                    pointer-events: initial;
+                }
+            }
+        }
+    }
+}

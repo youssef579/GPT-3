@@ -1,0 +1,84 @@
+// Imports
+@use '../helpers/variables' as *;
+
+.what-is {
+    padding-block: 50px;
+
+    .container {
+        padding: 50px 30px;
+        max-width: calc(100vw - 40px);
+        background-image: radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+
+        p {
+            color: $color-text;
+            font-weight: 500;
+            line-height: 24px;
+            font-size: 16px;
+        }
+
+        .intro {
+            display: flex;
+            
+            h1 {
+                flex: 4;
+                font-size: 19px;
+            }
+            
+            p {
+                flex: 6;
+            }
+
+            @media (width <= 620px) {
+                & {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .heading {
+            padding-block: 55px 67px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            h2 {
+                font-size: clamp(20px , 6vw, 35px);
+                max-width: 500px;
+                line-height: 1.2;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            @media (max-width: 992px) {
+                & {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 45px 30px;
+
+            .feature {
+                h3 {
+                    font-size: 19px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        // @media (width <=)
+    }
+}
