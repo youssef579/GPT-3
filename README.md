@@ -1,6 +1,7 @@
 # GPT-3
 
 GPT-3 is a modern UI / UX template
+Made with React library
 
 ## Technologies
 
