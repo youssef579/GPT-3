@@ -58,7 +58,7 @@
             width: 100%;
         }
 
-        @media (width <= 992px) {
+        @media (width <= 991px) {
             & {
                 grid-template-columns: 1fr;
                 gap: 40px;
