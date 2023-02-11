@@ -1,4 +1,4 @@
-@use '../helpers/variables' as *;
+@use "../helpers/variables" as *;
 
 .landing {
     padding-block: 50px;
@@ -45,7 +45,7 @@
                 display: grid;
                 grid-template-columns: auto 1fr;
                 gap: 20px;
-                    align-items: center;
+                align-items: center;
 
                 p {
                     font-size: 14px;
@@ -58,7 +58,7 @@
             width: 100%;
         }
 
-        @media (width <= 991px) {
+        @media (width <=991px) {
             & {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -69,10 +69,14 @@
             }
         }
 
-        @media (width <= 460px) {
+        @media (width <=460px) {
             form input {
                 padding: 15px !important;
                 font-size: 15px !important;
+
+                &:last-child {
+                    text-align: center;
+                }
             }
 
             .people {

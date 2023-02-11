@@ -1,5 +1,3 @@
-import React from "react";
-
 // Components
 import Feature from "../children/Feature";
 
@@ -35,7 +33,7 @@ export default function WhatIsGPT3() {
                         paragraph="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
                     />
                     <Feature
-                        heading="Chatbots"
+                        heading="Education"
                         paragraph="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
                     />
                 </div>
