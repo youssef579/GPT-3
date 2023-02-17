@@ -7,6 +7,7 @@ import "./assets/sass/main.scss";
 import Header from "./components/containers/Header";
 import Landing from "./components/containers/Landing";
 import WhatIsGPT3 from "./components/containers/WhatIsGPT3";
+import Features from "./components/containers/Features";
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
             <Header />
             <Landing />
             <WhatIsGPT3 />
+            <Features />
         </Fragment>
     );
 }

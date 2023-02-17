@@ -9,7 +9,7 @@ export default function WhatIsGPT3() {
                     <h1 className="gradient-before extra-bold">
                         What is GPT-3
                     </h1>
-                    <p>
+                    <p className="blue">
                         We so opinion friends me message as delight. Whole front
                         do of plate heard oh ought. His defective nor convinced
                         residence own. Connection has put impossible own
@@ -21,7 +21,9 @@ export default function WhatIsGPT3() {
                     <h2 className="gradient">
                         The possibilities are beyond your imagination
                     </h2>
-                    <a href="#library" className="light-orange">Explore the Library</a>
+                    <a href="#library" className="light-orange">
+                        Explore the Library
+                    </a>
                 </div>
                 <div className="features">
                     <Feature

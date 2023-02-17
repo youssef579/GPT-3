@@ -6,7 +6,7 @@ export default function NavBar({navRef, pageSectionsRef}) {
             <div ref={pageSectionsRef} className="website-sections">
                 <a href="#what-is">What Is GPT-3?</a>
                 <a>Open AI</a>
-                <a>case studies</a>
+                <a href="#features">case studies</a>
                 <a>library</a>
             </div>
             <div className="sign-btns">
