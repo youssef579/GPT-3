@@ -1,5 +1,0 @@
-@mixin vendor-prefixes($prop, $val) {
-    @each $prefix in ("", "-webkit-", "-moz-", "-ms-", "-o-") {
-        #{$prefix + $prop}: $val;
-    }
-}
