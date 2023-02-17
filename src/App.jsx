@@ -8,6 +8,7 @@ import Header from "./components/containers/Header";
 import Landing from "./components/containers/Landing";
 import WhatIsGPT3 from "./components/containers/WhatIsGPT3";
 import Features from "./components/containers/Features";
+import Banner from "./components/containers/Banner";
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
             <Landing />
             <WhatIsGPT3 />
             <Features />
+            <Banner />
         </Fragment>
     );
 }

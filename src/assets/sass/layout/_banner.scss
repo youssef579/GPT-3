@@ -1,0 +1,74 @@
+@use "../helpers/variables" as *;
+
+.banner {
+    padding-block: 50px;
+
+    .container {
+        max-width: calc(100vw - 40px);
+        border-radius: 20px;
+        padding: 30px;
+        background-image: $gradient-bar;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            p {
+                font-size: 15px;
+            }
+
+            h2 {
+                line-height: 1.5;
+                font-size: clamp(18px, 5vw, 25px);
+            }
+        }
+
+        button {
+            overflow: hidden;
+            font-weight: 500;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: black;
+            position: relative;
+
+            &:hover::before {
+                left: 125%;
+                top: 50px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 200px;
+                background-color: white;
+                top: -100px;
+                left: -25%;
+                rotate: 45deg;
+                box-shadow: 0 0 5px 5px white;
+                transition: {
+                    property: top, left;
+                    duration: $duration;
+                }
+            }
+        }
+        @media (width <= 704px) {
+            & {
+                gap: 20px;
+                grid-template-columns: 1fr;
+
+                button {
+                    width: fit-content;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
